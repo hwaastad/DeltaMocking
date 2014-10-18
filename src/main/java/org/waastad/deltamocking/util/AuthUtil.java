@@ -5,6 +5,7 @@
  */
 package org.waastad.deltamocking.util;
 
+import java.io.Serializable;
 import javax.enterprise.context.RequestScoped;
 
 /**
@@ -12,7 +13,12 @@ import javax.enterprise.context.RequestScoped;
  * @author Helge Waastad <helge.waastad@waastad.org>
  */
 @RequestScoped
-public class AuthUtil {
+public class AuthUtil implements Serializable {
+
+    private static final long serialVersionUID = 298311730402724610L;
+
+    public AuthUtil() {
+    }
 
     public String doStuff() {
         return "doing stuff";

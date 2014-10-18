@@ -14,14 +14,15 @@ import org.waastad.deltamocking.util.AuthUtil;
  * @author Helge Waastad <helge.waastad@waastad.org>
  */
 @Stateless
-public class BusinessBean {
+public class BusinessBean implements BusinessBeanLocal {
 
     @Inject
     private AuthUtil authUtil;
 
-    public void doSomething() {
+    @Override
+    public String doSomething() {
         System.out.println("Doing something...");
-        authUtil.doStuff();
+        return authUtil.doStuff();
     }
 
 }
