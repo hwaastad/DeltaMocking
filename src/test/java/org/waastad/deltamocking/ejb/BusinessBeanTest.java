@@ -40,7 +40,7 @@ public class BusinessBeanTest {
     @Classes(value = {BusinessBean.class}, cdi = true)
     @Jars(value = {"deltaspike-core-impl"})
     public WebApp app() {
-        return new WebApp().contextRoot("test");
+        return new WebApp();
     }
 
     @MockInjector
